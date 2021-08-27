@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Roboto"),
+         /* Если не получилось, загрузит woff2 */
+         url("/fonts/RobotoSlab-Regular.ttf") format("ttf"),
+         /* Если браузер не поддерживает woff2, загрузит woff */
+         url("/fonts/RobotoSlab-Medium.ttf") format("ttf");
+  }
+  
+  /* Теперь можно использовать шрифт */
+
+
+.body {
+    background-color: #2a2c2f;
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+.page {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.menu {
+    background-color: #2a2c2f;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0px 60px;
+}
+
+.menu__logo {
+    object-fit: contain;
+    object-position: 0px 6px;
+    height: 80px;
+    margin-top: 10px;
+}
+
+.menu__links {
+    /* background-color: rgba(214, 98, 94, 0.2); */
+    height: 40px;
+    /* width: 30%; */
+    /* margin: auto; */
+    margin-top: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    /* justify-content: space-evenly; */
+}
+
+.menu__link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    transition: color 1s;
+    font-size: 1.5em;
+    margin-left: 0.8em;
+}
+
+.menu__link_test {
+    opacity: 0.5;
+}
+
+.menu__link:hover {
+    color: #6F94D9;
+
+}
+
+.menu__link::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #6F94D9;
+    transform: scaleX(0);
+    transition: transform 0.6s ease;
+}
+
+.menu__link:hover::before {
+    transform: scaleX(1);
+}
+
+
+.project__heading {
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0 60px 0;
+    gap: 30px;
+    border: 15px solid;
+    border-image: url(img/bb.svg) 10;
+    
+}
+
+.project__card {
+    z-index: 1;
+    /* margin-right: 40px; */
+    padding: 6px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: #252526;
+    height: 400px;
+    width: 25%;
+    min-width: 300px;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 1px rgb(9 10 10 / 56%);
+    color: rgb(197, 196, 196);
+    overflow: scroll;
+    transition: box-shadow 1s;
+}
+
+.project__card:hover {
+    box-shadow: 10px 10px 10px 1px rgba(111, 148, 217, 0.562);
+
+}
+
+.project__card-img-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.project__card-img-black {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.project__card-img-black:hover {
+    background-color:rgba(0, 0, 0, 0.1);
+
+}
+
+/* .project__card-img-black:hover .podrobnee {
+    display: block;
+    
+
+}
+
+.podrobnee {
+    display: none;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    top: 40%;
+    font-size: 2em;
+} */
+
+.project__card-img {
+    object-fit: cover;
+    object-position: 1px 1px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 6px;
+}
+
+.project__card-info {
+    font-size: 1em ;
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.project__card-link {
+    text-decoration: none;
+    text-align: center;
+    color: #6F94D9;
+    font-size: 1em ;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.project__card-link:hover {
+    color: #D6625E;
+
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
