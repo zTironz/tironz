@@ -4,6 +4,10 @@ const projImg = document.querySelector('.project__card-img');
 const projInfo = document.querySelector('.project__card-info');
 const projWrap = document.querySelector('.project__card-img-wrap');
 const link = document.querySelector('.project__card-link');
+const menuButton = document.querySelector('.header__menu-button-img');
+const popupMenu = document.querySelector('.popup__menu');
+const popupMenuClose = document.querySelector('.popup__menu-close');
+
 
 
 projCard.addEventListener('click', function(event){
@@ -18,6 +22,19 @@ projCard.addEventListener('click', function(event){
    
     
 })
+menuButton.addEventListener('click', function(event){
+    popupMenu.classList.add('popup__menu_active');
+    if(event.target == popupMenuClose) {
+        popupMenu.classList.remove('popup__menu_active');
+    }
+})
+
+popupMenuClose.addEventListener('click', function(){
+
+        popupMenu.classList.remove('popup__menu_active');
+    
+})
+
 
 
 
