@@ -216,9 +216,21 @@
     display: flex;
 }
 
+.project__card-linkView {
+    text-decoration: none;
+    text-align: center;
+    color: #6F94D9;
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.project__card-linkView:hover {
+    color: #D6625E;
+}
+
 .project__card-link:hover {
     color: #D6625E;
-
 }
 
 .hidden {
@@ -275,10 +287,16 @@
 
 .footer__socials {
     margin-left: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .footer__social {
     margin-left: 10px;
+}
+
+.footer__img {
+    max-width: 30px;
 }
 
 
